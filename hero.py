@@ -31,9 +31,13 @@ def index():
                     # print(doc_df)
                     sql = "SELECT * FROM tmstaskdata "
                     rating_df = pd.io.sql.read_sql(sql, con)
-                    sql = "select traineeid,docid,rating from tmstaskdata where traineeid=3"
+                    sql = "select traineeid,docid,rating from tmstaskdata where traineeid=%s"
+                    cursor.execute(sql, ([num1]))
+                    a = cursor.fetchall()
+                    a = np.array(a)
+                    userInput = pd.DataFrame(a, columns=['traineeid', 'docid', 'rating'])
                     # cursor=con.cursor()
-                    userInput = pd.io.sql.read_sql(sql, con)
+                    #userInput = pd.io.sql.read_sql(sql, con)
                     inputId = doc_df[doc_df['docid'].isin(userInput['docid'].tolist())]
                     print(inputId)
                     inputdoc = pd.merge(userInput, inputId)
