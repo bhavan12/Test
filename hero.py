@@ -32,6 +32,7 @@ def index():
                     sql = "SELECT * FROM tmstaskdata "
                     rating_df = pd.io.sql.read_sql(sql, con)
                     sql = "select traineeid,docid,rating from tmstaskdata where traineeid=%s"
+                    cursor=con.cursor()
                     cursor.execute(sql, ([num1]))
                     a = cursor.fetchall()
                     a = np.array(a)
