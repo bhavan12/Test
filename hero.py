@@ -105,6 +105,7 @@ def index():
                                                                       ascending=False)
                     print(recommendation_df.head(5))
                     print(doc_df.loc[doc_df['docid'].isin(recommendation_df.head(5)['docid'].tolist())])
+                    df=doc_df.loc[doc_df['docid'].isin(recommendation_df.head(5)['docid'].tolist())]
                     a=df.to_json(orient="records")
                     return json.dumps(a)
                     # return 'hello'
