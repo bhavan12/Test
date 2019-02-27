@@ -105,7 +105,9 @@ def index():
                                                                       ascending=False)
                     print(recommendation_df.head(5))
                     print(doc_df.loc[doc_df['docid'].isin(recommendation_df.head(5)['docid'].tolist())])
-                    return 'hello'
+                    a=df.to_json(orient="records")
+                    return json.dumps(a)
+                    # return 'hello'
                 return 'values entered are out of range'
         except ValueError:
             return 'enter integer type parameters'
