@@ -20,7 +20,7 @@ Jinja2==2.10
 kiwisolver==1.0.1
 MarkupSafe==1.1.0
 matplotlib==2.2.2
-nltk==3.4
+nltk==3.4.5
 numpy==1.14.5
 packaging==18.0
 pandas==0.23.1
