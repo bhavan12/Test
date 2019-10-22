@@ -24,7 +24,7 @@ nltk==3.4
 numpy==1.14.5
 packaging==18.0
 pandas==0.23.1
-Pillow==5.3.0
+Pillow==6.2.0
 psycopg2==2.7.6.1
 pygal==2.4.0
 pyparsing==2.2.0
