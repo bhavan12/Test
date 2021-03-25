@@ -30,7 +30,7 @@ pygal==2.4.0
 pyparsing==2.2.0
 python-dateutil==2.5.0
 pytz==2018.4
-PyYAML==3.13
+PyYAML==5.4
 requests==2.21.0
 scikit-learn==0.19.1
 scipy==1.1.0
